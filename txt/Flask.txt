@@ -1,0 +1,166 @@
+Functions return in a server is called API.
+Flask is used to create api to run in server.
+Front-end is client and Server is backend.
+
+Flask is a lightweight where as jango is heavyweight so jango is used in business production.
+
+API -> DNS server -> then calling API Function's name (192.7.co.bbwcubdcibw) 
+
+Structure of Flask:
+templates -> HTML 
+app.py -> main Flask
+static -> js ,image,css.
+
+// installing Flask
+pip install flask
+py -m flask --version
+'''-m means which modules'''
+
+
+app = Flask(__name__) ->''' here __name__ print current apps or methods  name.'''
+  
+app.py
+new.py
+here there are two apps in flask 
+we can call a function which is inside app.py in new.py
+so while calling app.py when we run new.py all the function in app.py will return in new.py if we want only specific function to be called then we use '''if __name__ == "__main__": inside this we call the functions which should belong only to this functions.
+
+
+
+@app.route('/greet")
+here app is local host that is server and greet is function written by us.
+
+
+if __name__=="__main__":
+    app.run(debug=True) 
+this is used to run the app here debug=true means the changes made will be shown in realtime in server.
+
+
+
+port:5000,6000,7000 port is the process id
+these are the port which the server gives to the application that are running in the server.eg vscode->5000 so while running the app.y it will be running in 5000port.
+ip address:portid/data(that is page)  (ip address of server)
+
+
+
+@app.route('/hello')
+this is normal routing...but if we want to make a dynamic.
+@app.route('/hello/<name>')    here we should pass anything inside<> so by using this we can store many values inside app and then can be used inside function.
+def h(name):
+  return f"hello {name}"
+
+so while running 
+121:0.011:5000:/hello/Nishan   -> hello nishan
+121:0.011:5000:/hello/tanishk   -> hello tanishk
+
+
+a server can return only Jason,html,text.
+the main job of server is to return the data that's all
+
+
+
+get method -> the data sent to server can be seen in theurl of the network and is not safe.we can send only 30 character data in get method
+get data is not encrypted 
+
+
+post method -> data is encrypted and is safe to send the data.
+we can send unlimited data in post method.
+
+so the server and the client method should be same if the method is in post form in server then we should call in using post method if we try to call using get method then the server will send error.
+
+in python Flask we use jsonify module to conver any data into json format.
+
+
+
+Exception in Flask:
+to check if  we have error in sever the we use (handling error)
+
+@app.errorhandler(404)
+def page_not_found(e):
+  print(str(e))
+  return "<strong> page not found !!!</strong> ",404 
+
+so while returning we can send our custom page so that it shows same in all the browser.
+
+
+
+
+//2nd session.
+
+Render template
+# " dender " variable that is "_name__" double underscore special method in python.
+
+pipeline is the interface between client and api function.
+
+
+various error hander numbers:
+201->no respose
+200->success
+
+
+//json
+
+shell script data type is differnt from python so we cannot use lists,tuples and all and it will throw error so a global data type called json.
+json->java script object notation
+
+
+
+to convert the function or any data into Jason we use jasonify module 
+eg:  d=['1',"haery",5522]
+     return jasonify(d)
+
+in java the page(eg:index.html) name should be same as the public class name.
+
+in flask we use templates to store various html file we use templates because it is built in flask that we should use template folder other wise it might show error while fetching the html page.
+
+//sending data:
+
+java script runs in client side so its called front end language not backend.
+
+
+request :  accepting anything from html that is front end is accepted using request method.
+
+
+the request method is mainly used with args.
+
+
+Json.parse used to convert the jaon data into int ig.....
+
+
+to run Json and display data:
+curl -X GET -H "contentType: application/json" -d    '''-d represent data'''
+
+
+curl used to test the pipeline
+
+
+request.data.data1.to_dict()   //accessing the div data1 from parent div called data.
+
+
+
+d['j']=1   //if we assign like this then it will be like  d={'j':1}
+
+d[i]=d.get(i,0)+1  if there is d[i] in d then return i else 0.
+
+
+so the above all these sending data method is used to send the from the url.
+
+
+
+jinja
+
+while passing data we can send additional data using jinja 
+{{data}} {{lastname}}
+
+accessing variable in jinja {{}}
+for logical condition {% %}  {%  if d|int % 2 ==0  %}  //this convert the d to int then check for even numbers.
+
+in jinja we call fuctions as filters.
+
+
+
+
+
+
+
+
