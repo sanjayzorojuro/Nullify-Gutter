@@ -15,7 +15,7 @@ for (const item of files) {
 
     try {
       // Create the folder if it doesn’t exist
-      await fs.mkdir(extFolder, { recursive: true });   //recursive: true is used so that i dont error if the folder already exists.
+      await fs.mkdir(extFolder, { recursive: true });   //recursive: true is used so that it dont show error if the folder already exists.
 
       // Move the file into the folder
       await fs.rename(path.join(baseurl, item), path.join(extFolder, item));       //fs.rename(path.join(oldurl) ,path.join(newurl))
