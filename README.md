@@ -1,8 +1,8 @@
-📁 Node File Sorter & Organizer
+ # Node File Sorter & Organizer
 ---
 Intelligent File Management Tool
 ---
-🚀 Overview
+# Overview
 
 The Nullify-Gutter: Node File Sorter & Organizer is a robust, command-line utility built with Node.js designed to automatically clean up and categorize files within a specified directory.
 This tool reads a file's extension (e.g., .jpg, .pdf, .mp3) and automatically creates a corresponding folder named after that extension (e.g., a folder named jpg, pdf, or mp3) before moving the files into the correct locations. This provides an immediate solution for managing cluttered directories, enforcing a clean and organized file system structure.
@@ -15,7 +15,7 @@ Excluded Files: The script automatically skips its own configuration files, spec
 
 Error Handling: Includes a try...catch block to report errors gracefully during file processing.
 ---
-✨ Features
+# Features
 
 Extension-Based Sorting: Creates destination directories based directly on the file extension found.
 
@@ -27,7 +27,7 @@ Safe Execution: Skips files essential to the Node project itself (.js and .json 
 
 Logging: Provides console output confirming which file is currently being processed.
 ---
-⚙️ Installation
+# Installation
 
 To use this tool, you must have Node.js installed on your system.
 
@@ -49,7 +49,7 @@ npm install
 ---
 
 
-📌 Configuration & Customization
+# Configuration & Customization
 
 The core logic is self-contained within the main JavaScript file.
 
@@ -67,7 +67,7 @@ Change the value to your desired folder path.
 
 ---
 
-🤝 Contribution
+# Contribution
 
 We welcome contributions to expand the functionality of this project! If you have suggestions for improvements (e.g., handling files without extensions, better configuration methods):
 
